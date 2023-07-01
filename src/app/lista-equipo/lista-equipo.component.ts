@@ -44,4 +44,11 @@ export class ListaEquipoComponent implements OnInit{
     this.buscarEquipo();
   }
 
+  eliminarEquipo(idEquipo:number){
+    this.equipoServicio.eliminarEquipo(idEquipo).subscribe(dato => {
+      console.log(dato);
+      this.ObtenerEquipos();
+    })
+  }
+
 }
