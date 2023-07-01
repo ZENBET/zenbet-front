@@ -1,0 +1,18 @@
+<h2>Lista equipos</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Ubicación</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let equipo of equipos">
+            <td>{{equipo.idEquipo}}</td>
+            <td>{{equipo.nombreEquipo}}</td>
+            <td>{{equipo.ubicacionEquipo}}</td>
+        </tr>
+    </tbody>
+</table>
