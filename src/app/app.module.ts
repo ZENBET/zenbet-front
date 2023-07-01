@@ -16,13 +16,7 @@ import { ListaCompetenciasComponent } from './lista-competencias/lista-competenc
 import { RegistrarCompetenciaComponent } from './registrar-competencia/registrar-competencia.component';
 import { ActualizarCompetenciaComponent } from './actualizar-competencia/actualizar-competencia.component';
 
-/*
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatSnackBarModule} from '@angular/material/snack-bar';*/
+
 
 @NgModule({
   declarations: [
@@ -41,13 +35,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';*/
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule/*,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSnackBarModule*/
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

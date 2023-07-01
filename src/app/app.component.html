@@ -1,24 +1,32 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a routerLink="apostador" routerLinkActive="active" class="nav-link">Lista de apostadores</a>
-        </li>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="apostador" routerLinkActive="active" class="nav-link">Lista de apostadores</a>
+    </li>
 
-        <li class="nav-item">
-            <a routerLink="registrar-apostador" routerLinkActive="active" class="nav-link">Crear cuenta apostador</a>
-        </li>
+    <li class="nav-item">
+      <a routerLink="registrar-apostador" routerLinkActive="active" class="nav-link">Crear cuenta apostador</a>
+    </li>
 
-        <li class="nav-item">
-            <a routerLink="login" routerLinkActive="active" class="nav-link">Iniciar sesión</a>
-        </li>
+    <li class="nav-item">
+      <a routerLink="competencias" routerLinkActive="active" class="nav-link">Lista de Competencias</a>
+    </li>
 
-        <li class="nav-item">
-            <a routerLink="login" routerLinkActive="active" class="nav-link">Cerrar sesión</a>
-        </li>
-    </ul>
+    <li class="nav-item">
+      <a routerLink="registrar-competencia" routerLinkActive="active" class="nav-link">Añadir Competencia</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="login" routerLinkActive="active" class="nav-link">Iniciar sesión</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="login" routerLinkActive="active" class="nav-link">Cerrar sesión</a>
+    </li>
+  </ul>
 </nav>
 <h1 class="text-center">{{title}}</h1>
 <div class="container">
-   <!--  <app-lista-apostador></app-lista-apostador> -->
-   <router-outlet></router-outlet>
+  <!--  <app-lista-apostador></app-lista-apostador> -->
+  <router-outlet></router-outlet>
 </div>
