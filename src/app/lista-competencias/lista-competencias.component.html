@@ -1,1 +1,45 @@
-<p>lista-competencias works!</p>
+<br>
+
+  <form class="form-inline" th:action= "@{/}"
+  (ngSubmit) = "onSubmit()">
+    <div class="form-group mb-2">
+      <label>Filtrar: </label>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" name="nombreCompetencia" class="form-control" id="nombreCompetencia" [(ngModel)]="nombreCompetencia" placeholder="Digite el Nombre">
+    </div>
+
+    <input type="submit" class="btn btn-info mb-2" value="Buscar" (click)="buscarCompetencia()">
+
+    &nbsp;&nbsp;
+    <input type="button" class="btn btn-secondary mb-2" value="Regresar" (click)="regresar()">
+</form>
+
+
+<br>
+
+<h2>Lista De Competencias</h2>
+
+<table class=" table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Fecha Inicio</th>
+      <th>Fecha Fin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let competencia of competencias">
+      <td>{{competencia.idCompetencia}}</td>
+      <td>{{competencia.nombreCompetencia}}</td>
+      <td>{{competencia.fechaInicio}}</td>
+      <td>{{competencia.fechaFin}}</td>
+      <td>
+        <button (click)= "abrirEditarCompetencia(competencia.idCompetencia)" class="btn btn-info">Editar</button>
+        <button (click)= "eliminarCompetencia(competencia.idCompetencia)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
