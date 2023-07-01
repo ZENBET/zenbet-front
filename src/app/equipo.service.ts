@@ -9,6 +9,7 @@ import { Equipo } from './equipo';
 export class EquipoService {
 
   private baseURL = "http://localhost:8080/api/v1/equipo";
+  private urlNombre = "/nombre";
 
   constructor(private httpClient : HttpClient) { }
 
@@ -26,6 +27,10 @@ export class EquipoService {
 
   obtenerEquipoPorId(idEquipo:number): Observable<Equipo>{
     return this.httpClient.get<Equipo>(`${this.baseURL}/${idEquipo}`);
+  }
+
+  buscarEquipoNombre(nombreEquipo:string):Observable<Equipo[]>{
+    return this.httpClient.get<Equipo[]>(`${this.baseURL}${this.urlNombre}/${nombreEquipo}`);
   }
 
 }
