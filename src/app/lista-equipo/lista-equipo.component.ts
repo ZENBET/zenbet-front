@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ListaEquipoComponent implements OnInit{
 
   equipos:Equipo[];
+  nombreEquipo: string;
 
   constructor(private equipoServicio:EquipoService, private router: Router) {}
 
@@ -26,6 +27,21 @@ export class ListaEquipoComponent implements OnInit{
 
   abrirEditarEquipo(idEquipo:number){
     this.router.navigate(['abrirEditar-equipo', idEquipo]);
+  }
+
+  buscarEquipo() {
+    this.equipoServicio.buscarEquipoNombre(this.nombreEquipo).subscribe(dato => {
+      this.equipos = dato;
+    }, error => console.log(error));
+  }
+
+  regresar() {
+    this.nombreEquipo = '';
+    this.ObtenerEquipos();
+  }
+
+  onSubmit(){
+    this.buscarEquipo();
   }
 
 }
