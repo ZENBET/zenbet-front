@@ -24,4 +24,8 @@ export class ListaEquipoComponent implements OnInit{
     })
   }
 
+  abrirEditarEquipo(idEquipo:number){
+    this.router.navigate(['abrirEditar-equipo', idEquipo]);
+  }
+
 }
