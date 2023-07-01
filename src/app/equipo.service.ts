@@ -20,4 +20,12 @@ export class EquipoService {
     return this.httpClient.post(`${this.baseURL}`, equipo);
   }
 
+  actualizarEquipo(equipo:Equipo): Observable<Object>{
+    return this.httpClient.put<Equipo>(`${this.baseURL}`, equipo);
+  }
+
+  obtenerEquipoPorId(idEquipo:number): Observable<Equipo>{
+    return this.httpClient.get<Equipo>(`${this.baseURL}/${idEquipo}`);
+  }
+
 }

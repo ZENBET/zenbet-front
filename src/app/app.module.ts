@@ -17,6 +17,7 @@ import { RegistrarCompetenciaComponent } from './registrar-competencia/registrar
 import { ActualizarCompetenciaComponent } from './actualizar-competencia/actualizar-competencia.component';
 import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
 import { RegistrarEquipoComponent } from './registrar-equipo/registrar-equipo.component';
+import { ActualizarEquipoComponent } from './actualizar-equipo/actualizar-equipo.component';
 
 
 
@@ -33,7 +34,8 @@ import { RegistrarEquipoComponent } from './registrar-equipo/registrar-equipo.co
     RegistrarCompetenciaComponent,
     ActualizarCompetenciaComponent,
     ListaEquipoComponent,
-    RegistrarEquipoComponent
+    RegistrarEquipoComponent,
+    ActualizarEquipoComponent
   ],
   imports: [
     BrowserModule,
