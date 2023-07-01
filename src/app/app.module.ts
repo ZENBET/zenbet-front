@@ -12,6 +12,9 @@ import { AbrirEditarApostadorComponent } from './actualizar-apostador/actualizar
 import { DetallesApostadorComponent } from './detalles-apostador/detalles-apostador.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ListaCompetenciasComponent } from './lista-competencias/lista-competencias.component';
+import { RegistrarCompetenciaComponent } from './registrar-competencia/registrar-competencia.component';
+import { ActualizarCompetenciaComponent } from './actualizar-competencia/actualizar-competencia.component';
 
 /*
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,7 +32,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';*/
     AbrirEditarApostadorComponent,
     DetallesApostadorComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ListaCompetenciasComponent,
+    RegistrarCompetenciaComponent,
+    ActualizarCompetenciaComponent
   ],
   imports: [
     BrowserModule,
