@@ -14,6 +14,7 @@ import { RegistrarCompetenciaComponent } from './registrar-competencia/registrar
 import { ActualizarCompetenciaComponent } from './actualizar-competencia/actualizar-competencia.component';
 
 import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
+import { RegistrarEquipoComponent } from './registrar-equipo/registrar-equipo.component';
 
 const routes: Routes = [{
   path : 'apostador', component: ListaApostadorComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [{
 
   {path : 'equipo', component: ListaEquipoComponent},
   {path : '', redirectTo: 'equipo', pathMatch: 'full'},
+  {path : 'registrar-equipo', component : RegistrarEquipoComponent},
 ];
 
 @NgModule({

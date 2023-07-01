@@ -16,4 +16,8 @@ export class EquipoService {
     return this.httpClient.get<Equipo[]>(`${this.baseURL}`);
   }
 
+  registrarEquipo(equipo:Equipo): Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`, equipo);
+  }
+
 }
