@@ -1,1 +1,35 @@
-<p>registrar-competencia works!</p>
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Registro de Competencia</h3>
+  <form (ngSubmit) = "onSubmit()">
+    <div class = "form-group">
+      <label>Nombre: </label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]= "competencia.nombreCompetencia" name = "Nombre">
+    </div>
+
+    <div class="form-group">
+      <label>Fecha Inicio: </label>
+      <input type="text" class="form-control" id="fechaInicio" [(ngModel)]= "competencia.fechaInicio" name = "fechaInicio"
+      required
+      #fechaInicio = "ngModel"
+      pattern="^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$">
+      <div class="alert alert-danger" *ngIf= "fechaInicio.invalid" style="margin-top: 10px;">
+        <p>Debe tener el formato correcto: AAAA-MM-DD</p>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label>Fecha Fin: </label>
+      <input type="text" class="form-control" id="fechaFin" [(ngModel)]= "competencia.fechaFin" name = "fechaFin"required
+      #fechaFin = "ngModel"
+      pattern="^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$">
+      <div class="alert alert-danger" *ngIf= "fechaFin.invalid" style="margin-top: 10px;">
+        <p>Debe tener el formato correcto: AAAA-MM-DD</p>
+      </div>
+    </div>
+
+
+    <button class="btn btn-success">Guardar</button>
+
+  </form>
+</div>
