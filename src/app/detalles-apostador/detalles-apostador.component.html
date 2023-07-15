@@ -1,21 +1,37 @@
-<h2 style="background-color: rgb(155, 204, 250);">Detalles de Cuenta (Apostador)</h2>
-<div>
+<mat-toolbar style=" background-color: white;">
+  <span class="example-spacer"></span>
+  <span>DETALLES CUENTA - APOSTADOR</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+
+<mat-grid-list cols="2" rowHeight="2:1" style="margin-top: 30px;" >
+  <mat-grid-tile>
     <div>
-        <label><b>DNI: </b>{{apostador.dni}}</label>
+      <div>
+          <label><b>DNI: </b>{{apostador.dni}}</label>
+      </div>
+      <div>
+          <label><b>Nombre: </b>{{apostador.nombre}}</label>
+      </div>
+      <div>
+          <label><b>Telefono: </b>{{apostador.telefono}}</label>
+      </div>
+      <div>
+          <label><b>Correo: </b>{{apostador.correo}}</label>
+      </div>
+      <div>
+          <label><b>Direccion: </b>{{apostador.direccion}}</label>
+      </div>
+      <div>
+          <label><b>Saldo: </b>{{apostador.saldo}} soles</label>
+      </div>
+  </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div  style="text-align: center;">
+      <img src="./assets/img/usuario.png" width="50%">
     </div>
-    <div>
-        <label><b>Nombre: </b>{{apostador.nombre}}</label>
-    </div>
-    <div>
-        <label><b>Telefono: </b>{{apostador.telefono}}</label>
-    </div>
-    <div>
-        <label><b>Correo: </b>{{apostador.correo}}</label>
-    </div>
-    <div>
-        <label><b>Direccion: </b>{{apostador.direccion}}</label>
-    </div>
-    <div>
-        <label><b>Saldo: </b>{{apostador.saldo}} soles</label>
-    </div>
-</div>
+  </mat-grid-tile>
+</mat-grid-list>

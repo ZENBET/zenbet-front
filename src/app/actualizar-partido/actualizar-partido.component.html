@@ -1,72 +1,75 @@
+<mat-toolbar style=" background-color: white;">
+  <span class="example-spacer"></span>
+  <span>ACTUALIZAR PARTIDO</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
 <div class="col-md-6 offset-md-3">
-    <h3 class="text-center"> Registro de partido</h3>
-    <form (ngSubmit)="onSubmit()">
-  
-        <div class="form-group">
-            <label>ID del Equipo 1</label>
-            <input type="Equipo"
-            class="form-control"
-            id = "equipo1"
-            [(ngModel)] = "partido.equipo1.idEquipo"
-            name = "equipo1">
-        </div>
+  <form (ngSubmit)="onSubmit()">
 
-        <div class="form-group">
-            <label>ID del Equipo 2</label>
-            <input type="Equipo"
-            class="form-control"
-            id = "equipo2"
-            [(ngModel)] = "partido.equipo2.idEquipo"
-            name = "equipo2">
-        </div>
+      <div class="form-group">
+          <label>ID del Equipo 1</label>
+          <input type="Equipo"
+          class="form-control"
+          id = "equipo1"
+          [(ngModel)] = "partido.equipo1.idEquipo"
+          name = "equipo1">
+      </div>
 
-        <div class="form-group">
-            <label>ID de la competencia</label>
-            <input type="Competencia"
-            class="form-control"
-            id = "competencia"
-            [(ngModel)] = "partido.competencia.idCompetencia"
-            name = "competencia">
-        </div>
+      <div class="form-group">
+          <label>ID del Equipo 2</label>
+          <input type="Equipo"
+          class="form-control"
+          id = "equipo2"
+          [(ngModel)] = "partido.equipo2.idEquipo"
+          name = "equipo2">
+      </div>
 
-        <div class="form-group">
-            <label>Cuota equipo 1</label>
-            <input type="number"
-            class="form-control"
-            id = "cuotaEquipo1"
-            [(ngModel)] = "partido.cuotaEquipo1"
-            name = "cuotaEquipo1">
-        </div>
-  
-        <div class="form-group">
-            <label>Cuota equipo 2</label>
-            <input type="number"
-            class="form-control"
-            id = "cuotaEquipo2"
-            [(ngModel)] = "partido.cuotaEquipo2"
-            name = "cuotaEquipo2">
-        </div>
+      <div class="form-group">
+          <label>ID de la competencia</label>
+          <input type="Competencia"
+          class="form-control"
+          id = "competencia"
+          [(ngModel)] = "partido.competencia.idCompetencia"
+          name = "competencia">
+      </div>
 
-        <div class="form-group">
-            <label>Cuota empate</label>
-            <input type="number"
-            class="form-control"
-            id = "cuotaEmpate"
-            [(ngModel)] = "partido.cuotaEmpate"
-            name = "cuotaEmpate">
-        </div>
-  
-  
-        <div class="form-group">
-            <button class="btn btn-success" style="margin-top: 10px; margin-right: 10px;">Registrar</button>
-        </div>
-        <div>
-            <button class="btn btn-primary" style="margin-top: 10px;"><a href="http://localhost:4200/partido" style="color: white;">Volver</a></button>
-        </div>
-  
-  
-  
-    </form>
-  </div>
-  
-  
+      <div class="form-group">
+          <label>Cuota equipo 1</label>
+          <input type="number"
+          class="form-control"
+          id = "cuotaEquipo1"
+          [(ngModel)] = "partido.cuotaEquipo1"
+          name = "cuotaEquipo1">
+      </div>
+
+      <div class="form-group">
+          <label>Cuota equipo 2</label>
+          <input type="number"
+          class="form-control"
+          id = "cuotaEquipo2"
+          [(ngModel)] = "partido.cuotaEquipo2"
+          name = "cuotaEquipo2">
+      </div>
+
+      <div class="form-group">
+          <label>Cuota empate</label>
+          <input type="number"
+          class="form-control"
+          id = "cuotaEmpate"
+          [(ngModel)] = "partido.cuotaEmpate"
+          name = "cuotaEmpate">
+      </div>
+
+
+      <div class="form-group">
+          <button class="btn btn-success" style="margin-top: 10px; margin-right: 10px;">Guardar</button>
+          <button class="btn btn-danger" style="margin-top: 10px;"><a href="http://localhost:4200/partido" style="color: white;">Volver</a></button>
+      </div>
+
+
+
+
+  </form>
+</div>
+

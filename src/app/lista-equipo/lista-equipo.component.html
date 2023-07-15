@@ -1,4 +1,8 @@
-<br>
+<mat-toolbar style=" background-color: white;">
+  <span class="example-spacer"></span>
+  <span>LISTA EQUIPOS</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
 
 <form class="form-inline" th:action= "@{/}"
 (ngSubmit) = "onSubmit()">
@@ -18,7 +22,6 @@
 
 <br>
 
-<h2>Lista equipos</h2>
 
 <table class="table table-striped">
     <thead class="table-dark">
@@ -26,16 +29,27 @@
             <th>ID</th>
             <th>Nombre</th>
             <th>Ubicación</th>
+            <th></th>
         </tr>
     </thead>
 
     <tbody>
-        <tr *ngFor="let equipo of equipos">
+        <tr *ngFor= "let equipo of equipos">
             <td>{{equipo.idEquipo}}</td>
             <td>{{equipo.nombreEquipo}}</td>
             <td>{{equipo.ubicacionEquipo}}</td>
-            <td><button (click)="abrirEditarEquipo(equipo.idEquipo)" class="btn btn-info">Editar</button></td>
-            <td><button (click)="eliminarEquipo(equipo.idEquipo)" class="btn btn-danger"style="margin-left : 10px">Eliminar</button></td>
+            <td>
+              <!-- <td><button (click)="abrirEditarEquipo(equipo.idEquipo)" class="btn btn-info">Editar</button></td>
+              <td><button (click)="eliminarEquipo(equipo.idEquipo)" class="btn btn-danger">Eliminar</button></td> -->
+              <button mat-icon-button (click)="abrirEditarEquipo(equipo.idEquipo)" class="btn" style="color: #1f516f;">
+                <mat-icon>edit</mat-icon>
+              </button>
+
+              <button mat-icon-button (click)="eliminarEquipo(equipo.idEquipo)" class="btn" style="color: #E15639;">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
         </tr>
     </tbody>
 </table>
+

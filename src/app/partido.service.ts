@@ -32,4 +32,7 @@ export class PartidoService {
   eliminarPartido(idPartido:number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/${idPartido}`);
   }
+  buscarPartidoId(idPartido:string):Observable<Partido[]>{
+    return this.httpClient.get<Partido[]>(`${this.baseURL}${this.urlNombre}/${idPartido}`);
+  }
 }

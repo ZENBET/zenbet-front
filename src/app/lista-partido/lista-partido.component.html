@@ -1,4 +1,25 @@
-<h2>Lista partidos</h2>
+<mat-toolbar style=" background-color: white;">
+  <span class="example-spacer"></span>
+  <span>LISTA PARTIDOS</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+<form class="form-inline" th:action= "@{/}"
+  (ngSubmit) = "onSubmit()" >
+    <div class="form-group mb-2">
+      <label>Filtrar: </label>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" name="idPartido" class="form-control" id="idPartido" [(ngModel)]="idPartido" placeholder="Digite el ID">
+    </div>
+
+    <input type="submit" class="btn btn-info mb-2" value="Buscar" (click)="buscarPartido()">
+
+    &nbsp;&nbsp;
+    <input type="button" class="btn btn-secondary mb-2" value="Regresar" (click)="regresar()">
+</form>
+
 
 <table class="table table-striped">
     <thead class="table-dark">
@@ -10,6 +31,7 @@
             <th>Cuota Equipo 1</th>
             <th>Cuota Equipo 2</th>
             <th>Cuota Empate</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -22,8 +44,15 @@
             <td>{{partido.cuotaEquipo1}}</td>
             <td>{{partido.cuotaEquipo2}}</td>
             <td>{{partido.cuotaEmpate}}</td>
-            <td><button (click)="abrirEditarPartido(partido.idPartido)" class="btn btn-info">Editar</button></td>
-            <td><button (click)="eliminarPartido(partido.idPartido)" class="btn btn-danger"style="margin-left : 10px">Eliminar</button></td>
+
+            <button mat-icon-button (click)= "abrirEditarPartido(partido.idPartido)" class="btn boton-editar" style="color: #1f516f;">
+              <mat-icon>edit</mat-icon>
+            </button>
+
+            <button mat-icon-button (click)= "eliminarPartido(partido.idPartido)" class="btn" style="color: #E15639;">
+              <mat-icon>delete</mat-icon>
+            </button>
+
         </tr>
     </tbody>
 </table>
