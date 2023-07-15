@@ -1,5 +1,10 @@
+<mat-toolbar style=" background-color: white;">
+  <span class="example-spacer"></span>
+  <span>ACTUALIZAR PARTIDO</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
 <div class="col-md-6 offset-md-3">
-  <h3 class="text-center"> Registro de partido</h3>
   <form (ngSubmit)="onSubmit()">
 
       <div class="form-group">
@@ -58,11 +63,10 @@
 
 
       <div class="form-group">
-          <button class="btn btn-success" style="margin-top: 10px; margin-right: 10px;">Registrar</button>
+          <button class="btn btn-success" style="margin-top: 10px; margin-right: 10px;">Guardar</button>
+          <button class="btn btn-danger" style="margin-top: 10px;"><a href="http://localhost:4200/partido" style="color: white;">Volver</a></button>
       </div>
-      <div>
-          <button class="btn btn-primary" style="margin-top: 10px;"><a href="http://localhost:4200/partido" style="color: white;">Volver</a></button>
-      </div>
+
 
 
 

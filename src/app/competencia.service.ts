@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Competencia } from './competencia';
+import { Partido } from './partido';
 
 @Injectable({
   providedIn: 'root'
@@ -38,4 +39,5 @@ export class CompetenciaService {
   buscarCompeNombre(nombreCompetencia:string):Observable<Competencia[]>{
     return this.httpClient.get<Competencia[]>(`${this.baseURL}${this.urlNombre}/${nombreCompetencia}`);
   }
+
 }

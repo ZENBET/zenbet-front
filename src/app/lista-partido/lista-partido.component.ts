@@ -12,6 +12,7 @@ export class ListaPartidoComponent implements OnInit {
 
   partidos:Partido[];
   nombrePartido: String;
+  idPartido: string;
 
   constructor(private partidoServicio:PartidoService, private router: Router) {}
 
@@ -34,5 +35,20 @@ export class ListaPartidoComponent implements OnInit {
       console.log(dato);
       this.ObtenerPartidos();
     })
+  }
+
+  buscarPartido() {
+    this.partidoServicio.buscarPartidoId(this.idPartido).subscribe(dato => {
+      this.partidos = dato;
+    }, error => console.log(error));
+  }
+
+  regresar() {
+    this.idPartido = "";
+    this.ObtenerPartidos();
+  }
+
+  onSubmit(){
+    this.buscarPartido();
   }
 }
