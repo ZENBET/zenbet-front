@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
 
 //import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
       contrasena: this.contrasena
     };
 
-   
+
     localStorage.setItem('dniUsuario', this.dni); // Guarda el DNI en el localStorage
 
     this.http.post(url, apostador).subscribe(

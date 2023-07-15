@@ -3,13 +3,17 @@ import { Component, OnInit } from '@angular/core';
 import { CompetenciaService } from '../competencia.service';
 import { Router } from '@angular/router';
 
+
+
+
+
+
 @Component({
   selector: 'app-lista-competencias',
   templateUrl: './lista-competencias.component.html',
   styleUrls: ['./lista-competencias.component.css']
 })
 export class ListaCompetenciasComponent implements OnInit{
-
   competencias: Competencia[];
   nombreCompetencia: string;
 
@@ -19,7 +23,7 @@ export class ListaCompetenciasComponent implements OnInit{
    this.obtenerCompetencias();
   }
 
-  // me voy s suscribir a todo el listado de empleados
+  // me voy s suscribir a todo el listado de competencias
   private obtenerCompetencias(){
     this.competenciaService.obtenerListaDeCompetencias().subscribe(dato => {
       this.competencias = dato;

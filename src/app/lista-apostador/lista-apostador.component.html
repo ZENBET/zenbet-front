@@ -1,4 +1,10 @@
-<h2>Lista apostadores</h2>
+<mat-toolbar style=" background-color: white;">
+  <span class="example-spacer"></span>
+  <span>LISTA APOSTADORES</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
@@ -8,6 +14,7 @@
             <th>Correo</th>
             <th>Direccion</th>
             <th>Saldo</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -20,9 +27,22 @@
             <td>{{apostador.direccion}}</td>
             <td>{{apostador.saldo}}</td>
             <td>
-                <button (click)="abrirEditarApostador(apostador.dni)" class="btn btn-info">Editar</button>
+                <!-- <button (click)="abrirEditarApostador(apostador.dni)" class="btn btn-info">Editar</button>
                 <button (click)="eliminarApostador(apostador.dni)" class="btn btn-danger"style="margin-left : 10px">Eliminar</button>
-                <button (click)="verDetallesApostador(apostador.dni)" class="btn btn-primary"style="margin-left : 10px">Detalles</button>
+                <button (click)="verDetallesApostador(apostador.dni)" class="btn btn-primary"style="margin-left : 10px">Detalles</button> -->
+
+                <button mat-icon-button (click)="abrirEditarApostador(apostador.dni)" class="btn" style="color: #1f516f;">
+                  <mat-icon>edit</mat-icon>
+                </button>
+
+                <button mat-icon-button (click)="eliminarApostador(apostador.dni)" class="btn" style="color: #E15639;">
+                  <mat-icon>delete</mat-icon>
+                </button>
+
+                <button mat-icon-button (click)="verDetallesApostador(apostador.dni)" class="btn" >
+                  <mat-icon>info</mat-icon>
+                </button>
+
             </td>
         </tr>
     </tbody>

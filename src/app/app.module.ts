@@ -7,7 +7,7 @@ import { ListaApostadorComponent } from './lista-apostador/lista-apostador.compo
 
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrarApostadorComponent } from './registrar-apostador/registrar-apostador.component'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AbrirEditarApostadorComponent } from './actualizar-apostador/actualizar-apostador.component';
 import { DetallesApostadorComponent } from './detalles-apostador/detalles-apostador.component';
 import { LoginComponent } from './login/login.component';
@@ -18,6 +18,18 @@ import { ActualizarCompetenciaComponent } from './actualizar-competencia/actuali
 import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
 import { RegistrarEquipoComponent } from './registrar-equipo/registrar-equipo.component';
 import { ActualizarEquipoComponent } from './actualizar-equipo/actualizar-equipo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//nuevo
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -41,7 +53,18 @@ import { ActualizarEquipoComponent } from './actualizar-equipo/actualizar-equipo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTableModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,3 +2,19 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-inline{
+  justify-content: right;
+}
+
+.valign-center{
+  display: inline-flex;
+  align-items: center;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
