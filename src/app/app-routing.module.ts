@@ -17,6 +17,8 @@ import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
 import { RegistrarEquipoComponent } from './registrar-equipo/registrar-equipo.component';
 import { ActualizarEquipoComponent } from './actualizar-equipo/actualizar-equipo.component';
 
+import { ListaPartidoComponent } from './lista-partido/lista-partido.component';
+
 
 const routes: Routes = [{
   path : 'apostador', component: ListaApostadorComponent},
@@ -36,6 +38,10 @@ const routes: Routes = [{
   {path : '', redirectTo: 'equipo', pathMatch: 'full'},
   {path : 'registrar-equipo', component : RegistrarEquipoComponent},
   {path : 'abrirEditar-equipo/:idEquipo', component : ActualizarEquipoComponent},
+
+  //RUTAS PARTIDO
+
+  {path: 'partido', component: ListaPartidoComponent},
 ];
 
 @NgModule({
