@@ -1,1 +1,29 @@
-Samuel de mierda
+<h2>Lista partidos</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Equipo 1</th>
+            <th>Equipo 2</th>
+            <th>Competencia</th>
+            <th>Cuota Equipo 1</th>
+            <th>Cuota Equipo 2</th>
+            <th>Cuota Empate</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let partido of partidos">
+            <td>{{partido.idPartido}}</td>
+            <td>{{partido.equipo1.nombreEquipo}}</td>
+            <td>{{partido.equipo2.nombreEquipo}}</td>
+            <td>{{partido.competencia.nombreCompetencia}}</td>
+            <td>{{partido.cuotaEquipo1}}</td>
+            <td>{{partido.cuotaEquipo2}}</td>
+            <td>{{partido.cuotaEmpate}}</td>
+            <td><button (click)="abrirEditarPartido(partido.idPartido)" class="btn btn-info">Editar</button></td>
+            <td><button (click)="eliminarPartido(partido.idPartido)" class="btn btn-danger"style="margin-left : 10px">Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>

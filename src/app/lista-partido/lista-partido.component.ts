@@ -24,4 +24,15 @@ export class ListaPartidoComponent implements OnInit {
       this.partidos = dato;
     })
   }
+
+  abrirEditarPartido(idPartido:number){
+    this.router.navigate(['abrirEditar-partido', idPartido]);
+  }
+
+  eliminarPartido(idPartido:number){
+    this.partidoServicio.eliminarPartido(idPartido).subscribe(dato => {
+      console.log(dato);
+      this.ObtenerPartidos();
+    })
+  }
 }

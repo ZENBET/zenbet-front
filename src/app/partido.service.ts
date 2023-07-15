@@ -16,4 +16,20 @@ export class PartidoService {
   obtenerListaDePartidos():Observable<Partido[]>{
     return this.httpClient.get<Partido[]>(`${this.baseURL}`)
   }
+
+  obtenerPartidoPorId(idPartido:number): Observable<Partido>{
+    return this.httpClient.get<Partido>(`${this.baseURL}/${idPartido}`);
+  }
+
+  registrarPartido(partido:Partido): Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`, partido);
+  }
+
+  actualizarPartido(partido:Partido): Observable<Object>{
+    return this.httpClient.put<Partido>(`${this.baseURL}`, partido);
+  }
+
+  eliminarPartido(idPartido:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${idPartido}`);
+  }
 }
