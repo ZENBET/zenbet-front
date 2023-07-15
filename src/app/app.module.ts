@@ -22,7 +22,16 @@ import { ListaPartidoComponent } from './lista-partido/lista-partido.component';
 import { RegistrarPartidoComponent } from './registrar-partido/registrar-partido.component';
 import { ActualizarPartidoComponent } from './actualizar-partido/actualizar-partido.component';
 
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -47,7 +56,17 @@ import { ActualizarPartidoComponent } from './actualizar-partido/actualizar-part
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTableModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatGridListModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

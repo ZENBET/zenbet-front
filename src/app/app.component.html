@@ -1,4 +1,84 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<mat-toolbar color="primary">
+  <span>ZENBET</span>
+
+
+  <span class="example-spacer"></span>
+  <!-- <button mat-button routerLink="apostador" routerLinkActive="active" class="nav-link">Lista Apostadores</button>
+  <button mat-button routerLink="registrar-apostador" routerLinkActive="active" class="nav-link">Crear Cuenta Apostador</button>
+  <button mat-button routerLink="equipo" routerLinkActive="active" class="nav-link">Lista De Equipos</button>
+  <button mat-button routerLink="registrar-equipo" routerLinkActive="active" class="nav-link">Registrar equipo</button>
+  <button mat-button routerLink="competencias" routerLinkActive="active" class="nav-link">Lista de Competencias</button>
+  <button mat-button routerLink="registrar-competencia" routerLinkActive="active" class="nav-link">Registrar Competencia</button>
+  <button mat-button routerLink="login" routerLinkActive="active" class="nav-link">Iniciar sesión</button> -->
+  <!-- <button mat-button routerLink="home" routerLinkActive="active" class="nav-link">Perfil</button> -->
+
+
+  <button mat-button [mat-menu-trigger-for]="apostadore">
+    <div class="valign-center">
+      <span>Apostador</span>
+      <i class="material-icons">arrow_drop_down</i>
+    </div>
+  </button>
+
+  <button mat-button [mat-menu-trigger-for]="compe">
+    <div class="valign-center">
+      <span>Competencia</span>
+      <i class="material-icons">arrow_drop_down</i>
+    </div>
+  </button>
+
+  <button mat-button [mat-menu-trigger-for]="equip">
+    <div class="valign-center">
+      <span>Equipo</span>
+      <i class="material-icons">arrow_drop_down</i>
+    </div>
+  </button>
+
+  <button mat-button [mat-menu-trigger-for]="partidoo">
+    <div class="valign-center">
+      <span>Partidos</span>
+      <i class="material-icons">arrow_drop_down</i>
+    </div>
+  </button>
+
+  <mat-menu #apostadore="matMenu">
+    <button mat-button routerLink="apostador" routerLinkActive="active" class="nav-link">Lista Apostadores</button>
+    <button mat-button routerLink="registrar-apostador" routerLinkActive="active" class="nav-link">Crear Cuenta Apostador</button>
+  </mat-menu>
+
+  <mat-menu #compe="matMenu">
+    <button mat-button routerLink="competencias" routerLinkActive="active" class="nav-link">Lista de Competencias</button>
+    <button mat-button routerLink="registrar-competencia" routerLinkActive="active" class="nav-link">Registrar Competencia</button>
+  </mat-menu>
+
+  <mat-menu #equip="matMenu">
+    <button mat-button routerLink="equipo" routerLinkActive="active" class="nav-link">Lista Equipos</button>
+    <button mat-button routerLink="registrar-equipo" routerLinkActive="active" class="nav-link">Registrar equipo</button>
+  </mat-menu>
+
+  <mat-menu #partidoo="matMenu">
+    <button mat-button routerLink="partido" routerLinkActive="active" class="nav-link">Lista partidos</button>
+    <button mat-button routerLink="registrar-partido" routerLinkActive="active" class="nav-link">Registrar partido</button>
+  </mat-menu>
+
+
+
+  <span class="example-spacer"></span>
+
+
+  <button mat-button routerLink="login" routerLinkActive="active" class="nav-link" style="margin-right: 10px;">Iniciar sesión</button>
+
+  <button mat-icon-button routerLink="home" routerLinkActive="active" class="nav-link" style="margin-right: 10px;">
+    <mat-icon>person</mat-icon>
+  </button>
+
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="login" routerLinkActive="active" class="nav-link">
+    <mat-icon>logout</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+ <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item">
       <a routerLink="apostador" routerLinkActive="active" class="nav-link">Lista de apostadores</a>
@@ -21,15 +101,7 @@
     </li>
 
     <li class="nav-item">
-      <a routerLink="registrar-competencia" routerLinkActive="active" class="nav-link">Añadir Competencia</a>
-    </li>
-
-    <li class="nav-item">
-      <a routerLink="partido" routerLinkActive="active" class="nav-link">Lista partidos</a>
-    </li>
-
-    <li class="nav-item">
-      <a routerLink="registrar-partido" routerLinkActive="active" class="nav-link">Registrar partido</a>
+      <a routerLink="registrar-competencia" routerLinkActive="active" class="nav-link">Registrar Competencia</a>
     </li>
 
     <li class="nav-item">
@@ -39,11 +111,11 @@
     <li class="nav-item">
       <a routerLink="login" routerLinkActive="active" class="nav-link">Cerrar sesión</a>
     </li>
-
   </ul>
-</nav>
-<h1 class="text-center">{{title}}</h1>
+</nav> -->
+
 <div class="container">
-  <!--  <app-lista-apostador></app-lista-apostador> -->
+
   <router-outlet></router-outlet>
 </div>
+
