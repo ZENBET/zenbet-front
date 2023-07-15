@@ -19,6 +19,8 @@ import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
 import { RegistrarEquipoComponent } from './registrar-equipo/registrar-equipo.component';
 import { ActualizarEquipoComponent } from './actualizar-equipo/actualizar-equipo.component';
 import { ListaPartidoComponent } from './lista-partido/lista-partido.component';
+import { RegistrarPartidoComponent } from './registrar-partido/registrar-partido.component';
+import { ActualizarPartidoComponent } from './actualizar-partido/actualizar-partido.component';
 
 
 
@@ -37,7 +39,9 @@ import { ListaPartidoComponent } from './lista-partido/lista-partido.component';
     ListaEquipoComponent,
     RegistrarEquipoComponent,
     ActualizarEquipoComponent,
-    ListaPartidoComponent
+    ListaPartidoComponent,
+    RegistrarPartidoComponent,
+    ActualizarPartidoComponent
   ],
   imports: [
     BrowserModule,
